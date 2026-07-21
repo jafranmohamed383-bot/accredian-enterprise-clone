@@ -1,12 +1,7 @@
 import { NextResponse } from "next/server";
 
-export async function POST(request: Request) {
-  const body = await request.json();
-
-  console.log("Contact Form Data:", body);
-
+export async function POST() {
   return NextResponse.json({
-    success: true,
-    message: "Form submitted successfully!",
+    message: "Thanks! We will contact you soon.",
   });
 }
