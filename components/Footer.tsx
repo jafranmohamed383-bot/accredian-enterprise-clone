@@ -1,91 +1,72 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-950 text-white py-14">
-      <div className="max-w-6xl mx-auto px-6 grid gap-10 md:grid-cols-4">
+    <footer className="bg-gray-950 text-white pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-6 grid gap-10 md:grid-cols-4">
 
         {/* Brand */}
         <div>
-          <h2 className="text-3xl font-bold text-blue-400">
+          <h2 className="text-3xl font-bold text-blue-500">
             Accredian
           </h2>
 
-          <p className="mt-4 text-gray-400 leading-relaxed">
-            Empowering organizations with future-ready
-            enterprise learning solutions and skill development
-            programs.
+          <p className="mt-4 text-gray-400 leading-7">
+            Empowering organizations with enterprise learning
+            solutions that help teams grow with future-ready skills.
           </p>
         </div>
 
-
         {/* Company */}
         <div>
-          <h3 className="font-bold text-lg mb-5">
+          <h3 className="text-xl font-semibold mb-5">
             Company
           </h3>
 
           <ul className="space-y-3 text-gray-400">
-            <li className="hover:text-white cursor-pointer">
-              About
-            </li>
-            <li className="hover:text-white cursor-pointer">
-              Enterprise
-            </li>
-            <li className="hover:text-white cursor-pointer">
-              Programs
-            </li>
-            <li className="hover:text-white cursor-pointer">
-              Careers
-            </li>
+            <li className="hover:text-white cursor-pointer transition">Home</li>
+            <li className="hover:text-white cursor-pointer transition">Enterprise</li>
+            <li className="hover:text-white cursor-pointer transition">Programs</li>
+            <li className="hover:text-white cursor-pointer transition">About</li>
           </ul>
         </div>
 
-
         {/* Resources */}
         <div>
-          <h3 className="font-bold text-lg mb-5">
+          <h3 className="text-xl font-semibold mb-5">
             Resources
           </h3>
 
           <ul className="space-y-3 text-gray-400">
-            <li className="hover:text-white cursor-pointer">
-              Learning
-            </li>
-            <li className="hover:text-white cursor-pointer">
-              FAQs
-            </li>
-            <li className="hover:text-white cursor-pointer">
-              Support
-            </li>
+            <li className="hover:text-white cursor-pointer transition">Blog</li>
+            <li className="hover:text-white cursor-pointer transition">FAQs</li>
+            <li className="hover:text-white cursor-pointer transition">Support</li>
+            <li className="hover:text-white cursor-pointer transition">Privacy Policy</li>
           </ul>
         </div>
 
-
         {/* Contact */}
         <div>
-          <h3 className="font-bold text-lg mb-5">
+          <h3 className="text-xl font-semibold mb-5">
             Contact
           </h3>
 
           <p className="text-gray-400">
-            Email: info@accredian.com
+            📧 info@accredian.com
           </p>
 
-          <p className="text-gray-400 mt-3">
-            Phone: +91 00000 00000
+          <p className="mt-3 text-gray-400">
+            📞 +91 98765 43210
           </p>
 
-          <button className="mt-5 bg-blue-600 px-5 py-2 rounded-lg hover:bg-blue-700 transition">
+          <button className="mt-6 bg-blue-600 hover:bg-blue-700 hover:scale-105 transition-all duration-300 text-white px-6 py-3 rounded-lg shadow-md">
             Get Started
           </button>
         </div>
 
       </div>
 
-
       <div className="border-t border-gray-800 mt-12 pt-6 text-center text-gray-500">
-        © 2026 Accredian Enterprise Clone. All rights reserved.
+        © 2026 Accredian Enterprise Clone. All Rights Reserved.
       </div>
-
     </footer>
   );
 }

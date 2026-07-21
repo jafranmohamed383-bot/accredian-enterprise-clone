@@ -9,12 +9,10 @@ export default function ContactForm() {
     company: "",
   });
 
-  const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
@@ -45,8 +43,7 @@ export default function ContactForm() {
         email: "",
         company: "",
       });
-
-    } catch (error) {
+    } catch {
       setMessage("Something went wrong. Please try again.");
     }
 
@@ -54,29 +51,26 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-20 bg-blue-50 px-6">
-      <div className="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-xl">
+    <section className="py-24 px-6 bg-blue-50">
+      <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-8">
 
-        <h2 className="text-3xl font-bold text-center mb-2">
+        <h2 className="text-4xl font-bold text-center">
           Contact Us
         </h2>
 
-        <p className="text-center text-gray-600 mb-6">
-          Tell us how we can help your organization.
+        <p className="text-center text-gray-600 mt-3 mb-8">
+          Tell us about your organization and we'll get in touch.
         </p>
 
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-4"
-        >
+        <form onSubmit={handleSubmit} className="space-y-5">
 
           <input
             type="text"
             name="name"
-            placeholder="Your Name"
+            placeholder="Full Name"
             value={form.name}
             onChange={handleChange}
-            className="w-full border p-3 rounded-lg focus:outline-blue-500"
+            className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
 
@@ -86,7 +80,7 @@ export default function ContactForm() {
             placeholder="Email Address"
             value={form.email}
             onChange={handleChange}
-            className="w-full border p-3 rounded-lg focus:outline-blue-500"
+            className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
 
@@ -96,14 +90,14 @@ export default function ContactForm() {
             placeholder="Company Name"
             value={form.company}
             onChange={handleChange}
-            className="w-full border p-3 rounded-lg focus:outline-blue-500"
+            className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition disabled:opacity-50"
+            className="w-full bg-blue-600 hover:bg-blue-700 hover:scale-[1.02] transition-all duration-300 text-white py-3 rounded-lg shadow-md disabled:opacity-50"
           >
             {loading ? "Submitting..." : "Submit"}
           </button>
@@ -111,7 +105,7 @@ export default function ContactForm() {
         </form>
 
         {message && (
-          <p className="mt-5 text-center text-green-600 font-medium">
+          <p className="mt-6 text-center text-green-600 font-semibold">
             {message}
           </p>
         )}
